@@ -1,0 +1,95 @@
+Assignment-1
+
+1.
+public boolean isPrime(int n){
+	for(int i=2;i*i<n;i++){
+		if(n%i)return false;
+}
+
+return true;
+}
+
+2.
+
+public boolean isArmstrong(){
+	Scanner sc=new Scanner();
+
+	String n=sc.nextLine();
+	int l=n.length();
+	int sum=0;
+	int number=Integer.parseInt(n); 
+	int num=number;
+	while(num!=0){
+		sum=sum+Math.pow((num%10),l);
+		num=num/10;
+	}
+	
+	if(number==sum)return true;
+	return false;
+	
+
+}
+
+3.
+
+public boolean isPalindrome(String word){
+	int l=word.length();
+	for(int i=0;i<l/2;i++){
+		if(word[i]!=word[l-1-i])return false;
+	}
+	
+	return true;
+}
+
+public void printPalindromeWords(){
+	Scanner sc=new Scanner();
+
+	String sent=sc.nextLine();
+	String[] words=sent.split(" ");
+	int l=words.length();
+	for(int i=0;i<l;i++){
+		if(isPalindrome(sent[i]))System.out.println(sent[i]);
+	}
+
+}
+
+4.
+public void removeDuplicates(int[] arr){
+	int[] narr
+}
+
+Assignment-2
+
+1.
+int c=j*k*l*m*n;
+for (i=1; i<count; i++) { 
+	a[i] = i*c; 
+} 
+
+This will save time in computation but will increase memory requirement.
+
+2.
+for (discount = 0; discount < numD; discount++) 
+	temp=discountTbl[discount];
+{ 
+ for (rate = 0; rate < numR; rate++) 
+ { 
+     rateTbl[rate] = rateTbl[rate] * temp; 
+ } 
+} 
+
+3.
+	double c=Math.pow(log(3),2);
+
+for (i=1; i<count; i++) { 
+   a[i] = Math.pow(log(i), 2)/c; 
+} 
+
+Assignment-3
+
+1.
+0
+2.
+1,3
+3.
+12" "1

@@ -1,0 +1,21 @@
+1. select BID from tbook where BNAME='Javascript';
+
+2.SELECT BID, BNAME
+FROM tbook
+GROUP BY BNAME
+HAVING BID > 5; 
+
+3.SELECT BID, BNAME
+FROM tbook
+GROUP BY BNAME
+HAVING BID DESC;
+
+4.SELECT * FROM tbook
+WHERE BNAME IN ('Javascript', 'Java', 'Python');
+
+Join joins two tables in which one table has primary key which is foreign key for other table.
+It joins such that two rows are made one if primary key=foreign key.
+
+Two joins inner and outer
+inner keeps rows on left side table which dont have matching parameter.
+outer: keep row of right side table.
