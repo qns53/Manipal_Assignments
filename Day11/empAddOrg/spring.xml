@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:aop="http://www.springframework.org/schema/aop"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-4.3.xsd
+http://www.springframework.org/schema/aop
+http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+
+<context:annotation-config/>
+
+ <bean id="employee" class="com.manipal.spring_demo2.Employee">
+<constructor-arg name="empId" value="123"/>
+<constructor-arg name="empName" value="HQR"/>
+<constructor-arg name="salary" value="500000.36"/>
+
+
+</bean>
+
+<bean id="organization" class="com.manipal.spring_demo2.Organization">
+<property name="id" value="123"></property>
+<property name="name" value="Manipal"></property>
+<property name="employeeList">
+	<list>
+	<ref bean="employee1"></ref>
+	<ref bean="employee2"></ref>
+	<ref bean="employee1"></ref>
+	</list>
+</property>
+</bean>
+
+ <bean id="employee1" class="com.manipal.spring_demo2.Employee">
+<constructor-arg name="empId" value="635"/>
+<constructor-arg name="empName" value="HQT"/>
+<constructor-arg name="salary" value="525000.36"/>
+
+<constructor-arg name="addresses">
+	<set>
+	<ref bean="address"></ref>
+	<ref bean="address1"></ref>
+	
+	</set>
+</constructor-arg>
+
+
+</bean>
+
+ <bean id="employee2" class="com.manipal.spring_demo2.Employee">
+<constructor-arg name="empId" value="783"/>
+<constructor-arg name="empName" value="HQY"/>
+<constructor-arg name="salary" value="500450.36"/>
+
+<constructor-arg name="addresses">
+	<set>
+	<ref bean="address3"></ref>
+	<ref bean="address4"></ref>
+	
+	</set>
+</constructor-arg>
+
+</bean>
+
+ <bean id="employee3" class="com.manipal.spring_demo2.Employee">
+<constructor-arg name="empId" value="823"/>
+<constructor-arg name="empName" value="HQU"/>
+<constructor-arg name="salary" value="500980.36"/>
+
+
+</bean>
+<bean id="address" class="com.manipal.spring_demo2.Address">
+<property name="streetNo" value="123" />
+<property name="city" value="mumbai" />
+<property name="pin" value="600000" />
+
+</bean>
+
+ <bean id="address2" class="com.manipal.spring_demo2.Address">
+<property name="streetNo" value="133" />
+<property name="city" value="punjab" />
+<property name="pin" value="600000" />
+
+</bean>
+
+<bean id="address3" class="com.manipal.spring_demo2.Address">
+<property name="streetNo" value="233" />
+<property name="city" value="haryana" />
+<property name="pin" value="600003" />
+
+</bean> 
+ <bean id="address4" class="com.manipal.spring_demo2.Address">
+<property name="streetNo" value="173" />
+<property name="city" value="gujrat" />
+<property name="pin" value="6000780" />
+
+</bean>
+</beans>
