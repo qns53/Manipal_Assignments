@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.manipal</groupId>
-	<artifactId>flight-service</artifactId>
+	<artifactId>flight-search-booking-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>flight-service</name>
+	<name>flight-search-booking-service</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -31,6 +31,14 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
 
 		<dependency>

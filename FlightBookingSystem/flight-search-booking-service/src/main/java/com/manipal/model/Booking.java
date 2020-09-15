@@ -20,7 +20,7 @@ public class Booking {
 	@Column(name="booking_date")
 	private LocalDate bookingDate;
 	@Column(name="travel_date")
-	private LocalDate traveDate;
+	private LocalDate travelDate;
 	@Column(name="total_cost")
 	private double totalCost;
 	@Column(name="flight_booked")
@@ -36,7 +36,7 @@ public class Booking {
 		this.booking_id = booking_id;
 		this.person_id = person_id;
 		this.bookingDate = bookingDate;
-		this.traveDate = traveDate;
+		this.travelDate = traveDate;
 		this.totalCost = totalCost;
 		this.flightBooked = flightBooked;
 		this.flight_id = flight_id;
@@ -67,11 +67,11 @@ public class Booking {
 	}
 
 	public LocalDate getTraveDate() {
-		return traveDate;
+		return travelDate;
 	}
 
 	public void setTraveDate(LocalDate traveDate) {
-		this.traveDate = traveDate;
+		this.travelDate = traveDate;
 	}
 
 	public double getTotalCost() {
@@ -101,7 +101,7 @@ public class Booking {
 	@Override
 	public String toString() {
 		return "Booking [booking_id=" + booking_id + ", person_id=" + person_id + ", bookingDate=" + bookingDate
-				+ ", traveDate=" + traveDate + ", totalCost=" + totalCost + ", flightBooked=" + flightBooked
+				+ ", traveDate=" + travelDate + ", totalCost=" + totalCost + ", flightBooked=" + flightBooked
 				+ ", flight_id=" + flight_id + "]";
 	}
 	
